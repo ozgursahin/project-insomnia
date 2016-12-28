@@ -3,7 +3,7 @@
   "globals": {
     // Angular
     "angular": false,
-
+    "grunt": true,
     // Angular mocks
     "module": false,
     "inject": false,
