@@ -1,80 +1,69 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="insomnia" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="insomnia" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="insomnia" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" ng-app="insomnia" class="no-js">
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Project Insomnia</title>
 		<meta name="description" content="Project Insomnia">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-		<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+		<meta name="author" content="hayabusa">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 		<link rel="stylesheet" href="insomnia-main.css">
 		<link rel="icon" href="static/favicon.ico">
 	</head>
 
 	<body>
-		<div class="site-wrapper">
-			<div class="site-wrapper-inner">
-				<div class="cover-container">
-					<div class="masthead clearfix">
-						<div class="inner">
-							<h3 class="masthead-brand">Cover</h3>
-							<nav>
-								<ul class="nav masthead-nav">
-									<li class="active"><a href="#">Home</a></li>
-									<li><a href="#">Features</a></li>
-									<li><a href="#">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" ui-sref="home">Insomnia</a>
 
-					<div class="inner cover">
-						<h1 class="cover-heading">Cover your page.</h1>
-						<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own
-							fullscreen background photo to make it your own.</p>
-						<p class="lead">
-							<a href="#" class="btn btn-lg btn-default">Learn more</a>
-						</p>
-					</div>
-
-					<div class="mastfoot">
-						<div class="inner">
-							<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-						</div>
-					</div>
-				</div>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<i class="fa fa-home" aria-hidden="true"></i>
+						<a class="nav-link" ui-sref="home" ui-sref-active="active">Home</a>
+					</li>
+					<li class="nav-item">
+						<i class="fa fa-picture-o" aria-hidden="true"></i>
+						<a class="nav-link" ui-sref="gallery" ui-sref-active="active">Gallery</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
 			</div>
-		</div>
+		</nav>
+
+		<ui-view></ui-view>
 
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-
-		<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-		<script src="bower_components/angular/angular.js"></script>
-		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+		<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="bower_components/angular-material/angular-material.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="app.js"></script>
-		<script src="view1/view1.js"></script>
-		<script src="view2/view2.js"></script>
+		<script src="pages/home/home-page.js"></script>
+		<script src="pages/gallery/gallery-page.js"></script>
 		<script src="components/version/version.js"></script>
 		<script src="components/version/version-directive.js"></script>
 		<script src="components/version/interpolate-filter.js"></script>
+		<script src="bower_components/tether/dist/js/tether.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	</body>
-
-<!--	<body>
-		<ul class="menu">
-			<li><a href="#!/view1">view1</a></li>
-			<li><a href="#!/view2">view2</a></li>
-		</ul>
-		<div ng-view></div>
-		<div>Project Insomnia: v<span app-version></span></div>
-	</body>-->
 </html>

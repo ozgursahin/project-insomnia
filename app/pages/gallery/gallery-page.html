@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div class="btn-group gallery-toolbar" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" ng-click="showAdvanced($event)">Show Picture List</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+
+<div class="gallery container-fluid">
+	<div class="pictures no-gutters">
+		<img ng-repeat="picture in pictures" class="picture col-md-4" ng-src="{{picture}}" />
+	</div>
+</div>
